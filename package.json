@@ -1,0 +1,25 @@
+{
+  "name": "wildwildws-d",
+  "version": "1.0.0",
+  "description": "CLI daemon for vim wildwildws plugin",
+  "bin": {
+    "wildwildws-d": "./cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dhleong/wildwildws-d.git"
+  },
+  "author": "Daniel Leong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dhleong/wildwildws-d/issues"
+  },
+  "homepage": "https://github.com/dhleong/wildwildws-d#readme",
+  "dependencies": {
+    "meow": "^4.0.0",
+    "ws": "^5.1.1"
+  }
+}
