@@ -25,7 +25,7 @@ const url = cli.input[0];
 if (!url) cli.showHelp();
 
 const daemon = new Daemon(cli.input[0], {
-    headers: cli.flags.header.map(raw => {
+    headers: (cli.flags.header || []).map(raw => {
         const parts = raw.split(':');
         const name = parts.shift();
         const val = parts.join(":");
