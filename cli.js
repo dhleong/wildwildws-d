@@ -24,8 +24,18 @@ const cli = meow(`
 const url = cli.input[0];
 if (!url) cli.showHelp();
 
+function arrayify(arg) {
+    if (!arg) {
+        return [];
+    } else if (Array.isArray(arg)) {
+        return arg;
+    } else {
+        return [arg];
+    }
+}
+
 const daemon = new Daemon(cli.input[0], {
-    headers: (cli.flags.header || []).map(raw => {
+    headers: arrayify(cli.flags.header).map(raw => {
         const parts = raw.split(':');
         const name = parts.shift();
         const val = parts.join(":");
