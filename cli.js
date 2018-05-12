@@ -6,10 +6,10 @@ const { Daemon } = require('./src/wildwildws');
 const cli = meow(`
     Usage
       $ wildwildws-d <url> <options>
- 
+
     Options
       --header, -h  Specify a header in NAME:VALUE format
- 
+
     Examples
       $ wildwildws-d wss://foo.com -h Authorization:token
 `, {
